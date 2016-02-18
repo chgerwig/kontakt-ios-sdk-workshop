@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set your API Key
         Kontakt.setAPIKey("<#Api Key#>")
         
+        // Register User Notifications
+        let settings = UIUserNotificationSettings(forTypes: [ UIUserNotificationType.Alert, UIUserNotificationType.Sound ], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        
         return true
     }
 }

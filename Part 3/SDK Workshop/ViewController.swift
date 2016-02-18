@@ -47,10 +47,17 @@ extension ViewController: KTKEddystoneManagerDelegate {
         }
         
         // Load First URL
-        if let url = eddystones.first?.eddystoneURL?.url {
-            manager.stopEddystoneDiscoveryInAllRegions()
-            webView.loadRequest(NSURLRequest(URL: url))
-        }
+//        if let url = eddystones.first?.eddystoneURL?.url {
+//            manager.stopEddystoneDiscoveryInAllRegions()
+//            
+////            webView.loadRequest(NSURLRequest(URL: url))
+//            
+////            let notification = UILocalNotification()
+////            notification.alertBody = "Eddystone: \(url.absoluteString)"
+////            notification.fireDate = NSDate()
+////            
+////            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+//        }
     }
     
     func eddystoneManager(manager: KTKEddystoneManager, didUpdateEddystone eddystone: KTKEddystone, withFrame frameType: KTKEddystoneFrameType) {
