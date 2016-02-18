@@ -18,9 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        // Set API Key
-        Kontakt.setAPIKey("<#API_KEY#>")
-        
         // Initiate Beacon Manager
         beaconManager = KTKBeaconManager(delegate: self)
         beaconManager.requestLocationAlwaysAuthorization()
@@ -29,8 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let proximityUUID = NSUUID(UUIDString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
         let region = KTKBeaconRegion(proximityUUID: proximityUUID!, identifier: "region-identifier")
         
+        //let region = KTKBeaconRegion(proximityUUID: proximityUUID!, major: 101, identifier: "region-identifier-M")
+        //let region = KTKBeaconRegion(proximityUUID: proximityUUID!, major: 101, minor: 201, identifier: "region-identifier-M-m")
+        
+        // let secureProximityUUID = NSUUID(UUIDString: "<#Secure Proximity#>")
+        // let secureRegion = KTKSecureBeaconRegion(secureProximityUUID: secureProximityUUID!, identifier: "region-identifier")
+        
         // Region Properties
         region.notifyEntryStateOnDisplay = true
+        
+        //beaconManager.stopMonitoringForAllRegions()
         
         // Start Ranging
         beaconManager.startRangingBeaconsInRegion(region)
@@ -70,6 +75,10 @@ extension AppDelegate: KTKBeaconManagerDelegate {
     
     func beaconManager(manager: KTKBeaconManager, didRangeBeacons beacons: [CLBeacon], inRegion region: KTKBeaconRegion) {
         print("Did ranged \"\(beacons.count)\" beacons inside region: \(region)")
+
+        if let closestBeacon = beacons.sort({ $0.0.accuracy < $0.1.accuracy }).first where closestBeacon.accuracy > 0 {
+            print("Closest Beacon is M: \(closestBeacon.major), m: \(closestBeacon.minor) ~ \(closestBeacon.accuracy) meters away.")
+        }
     }
 }
 
