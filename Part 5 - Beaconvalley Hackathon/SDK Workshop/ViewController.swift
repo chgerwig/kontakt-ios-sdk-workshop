@@ -57,6 +57,23 @@ extension ViewController: KTKDevicesManagerDelegate {
                 }
             }
         }
+        
+        /* Read Motion Data
+        if let device = devices?.filter({ $0.uniqueID == "<#unique id#>" }).first {
+            manager.stopDevicesDiscovery()
+            
+            connection = KTKDeviceConnection(nearbyDevice: device)
+            
+            if let connection = connection {
+                // Read Configuration
+                connection.readConfigurationWithCompletion { configuration, error in
+                    print(configuration?.motionDetectionMode.rawValue)
+                    print(configuration?.motionDetectionThreshold)
+                    print(configuration?.motionCounter)
+                }
+            }
+        }
+        */
     }
 }
 
