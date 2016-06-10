@@ -12,8 +12,8 @@
 		0D166CDA1C71F457004A99E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D166CD81C71F457004A99E0 /* Main.storyboard */; };
 		0D166CDC1C71F457004A99E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D166CDB1C71F457004A99E0 /* Assets.xcassets */; };
 		0D166CDF1C71F457004A99E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D166CDD1C71F457004A99E0 /* LaunchScreen.storyboard */; };
-		0D792E5E1D0B82AF001A829E /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D792E5D1D0B82AF001A829E /* KontaktSDK.framework */; };
-		0D792E641D0B8400001A829E /* KontaktSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D792E5D1D0B82AF001A829E /* KontaktSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D792E5A1D0B7FFF001A829E /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D792E591D0B7FFF001A829E /* KontaktSDK.framework */; };
+		0D792E5C1D0B801D001A829E /* KontaktSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D792E591D0B7FFF001A829E /* KontaktSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0D792E641D0B8400001A829E /* KontaktSDK.framework in Embed Frameworks */,
+				0D792E5C1D0B801D001A829E /* KontaktSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 		0D166CDB1C71F457004A99E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D166CDE1C71F457004A99E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D166CE01C71F457004A99E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D792E5D1D0B82AF001A829E /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../SDK/KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
+		0D792E591D0B7FFF001A829E /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../SDK/KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D792E5E1D0B82AF001A829E /* KontaktSDK.framework in Frameworks */,
+				0D792E5A1D0B7FFF001A829E /* KontaktSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		0D166CE61C71F6DC004A99E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0D792E5D1D0B82AF001A829E /* KontaktSDK.framework */,
+				0D792E591D0B7FFF001A829E /* KontaktSDK.framework */,
 			);
 			name = Frameworks;
 			path = "SDK Workshop";
