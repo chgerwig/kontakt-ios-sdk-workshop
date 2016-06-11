@@ -41,6 +41,9 @@ extension ViewController: KTKDevicesManagerDelegate {
             manager.stopDevicesDiscovery()
             
             let configuration = KTKDeviceConfiguration()
+            
+            configuration.major = 1234
+            configuration.minor = 5678
             configuration.motionDetectionMode = .Alarm
             
             connection = KTKDeviceConnection(nearbyDevice: device)
